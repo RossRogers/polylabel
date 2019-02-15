@@ -20,7 +20,7 @@ function polylabel(polygon, precision, debug) {
 
     var width = maxX - minX;
     var height = maxY - minY;
-    var cellSize = Math.min(width, height);
+    var cellSize = Math.max(Math.min(width, height), precision/2);
     var h = cellSize / 2;
 
     if (cellSize === 0) return [minX, minY];
